@@ -33,4 +33,17 @@ public class Triangle{
     }
     return new Point(this.v3.getX(), this.v3.getY());
   }
+  public void setVertex(int idx, Point p){
+    if (idx < 1 || idx > 3){
+      System.out.println("Please enter a number between 1 to 3 inclusive.");
+    }
+    if (idx == 1){
+      this.v1 = new Point(p.getX(), p.getY());
+    }if (idx == 2){
+      this.v2 = new Point(p.getX(), p.getY());
+    }
+    if (idx == 3){
+      this.v3 = new Point(p.getX(), p.getY());
+    }
+  }
 }

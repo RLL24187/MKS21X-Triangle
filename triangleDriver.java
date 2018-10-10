@@ -27,10 +27,15 @@ public class triangleDriver{
     System.out.println(C2.getY()); //Should get 12.0
     System.out.println(B1.getX()); //Should get 1.0
     //Testing Point copy
+    Point P1 = C1.copy();//Method
     Point P2 = A1.copy();//Method
     Point P3 = new Point(B2); //Constructor
+    Point P4 = new Point(A2); //Constructor
     //Testing Point toString()
+    System.out.println(P1.toString());
     System.out.println(P2.toString());
+    System.out.println(P3.toString());
+    System.out.println(P4.toString());
     //Testing Point class distanceTo
     System.out.println(A1.distanceTo(C1)); //Should get 5.0
     System.out.println(B2.distanceTo(C2)); //Should get 12.0
@@ -49,7 +54,11 @@ public class triangleDriver{
     System.out.println(TA.getPerimeter()); //Should get 90.0
     System.out.println(TB.getPerimeter()); //Should get about 53.781
     //Testing getVertex()
-    System.out.println(T1.getVertex(3)); //Should get (5, 5)
-    System.out.println(TB.getVertex(2)); //Should get (8, 5)
+    System.out.println(T1.getVertex(3)); //Should get (5.0, 5.0)
+    System.out.println(TB.getVertex(2)); //Should get (8.0, 5.0)
+    //Testing setVertex(int, Point)
+    Point testP1 = new Point(10, -9);
+    TB.setVertex(2, testP1);
+    System.out.println(TB.getVertex(2)); //Should get (10.0, -9.0)
   }
 }
