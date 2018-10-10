@@ -20,7 +20,17 @@ public class Triangle{
     return v1.distanceTo(v2) + v1.distanceTo(v3) + v2.distanceTo(v3);
   }
   //Getting vertex
-  //public Point getVertex(int num){
-    //return;
-  //}
+  public Point getVertex(int index){
+    if (index < 1 || index > 3){
+      System.out.println("Please enter a number between 1 to 3 inclusive.");
+      return new Point(0.,0.);
+    }
+    if (index == 1){
+      return new Point(this.v1.getX(), this.v1.getY());
+    }
+    if (index == 2){
+      return new Point(this.v2.getX(), this.v2.getY());
+    }
+    return new Point(this.v3.getX(), this.v3.getY());
+  }
 }
