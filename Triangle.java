@@ -46,4 +46,8 @@ public class Triangle{
       this.v3 = new Point(p.getX(), p.getY());
     }
   }
+  //toString triangle
+  public String toStringTriangle(){
+    return "Triangle: A" + this.v1.toString() + ", B" + this.v2.toString() + ", C" + this.v3.toString(); 
+  }
 }

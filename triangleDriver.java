@@ -60,5 +60,7 @@ public class triangleDriver{
     Point testP1 = new Point(10, -9);
     TB.setVertex(2, testP1);
     System.out.println(TB.getVertex(2)); //Should get (10.0, -9.0)
+    //Testing toString() triangle
+    System.out.println(TA.toStringTriangle());
   }
 }
