@@ -21,7 +21,7 @@ public class Point{
     return Math.sqrt((changeX * changeX) + (changeY * changeY));
   }
   //Distance between two points given in params
-  public double distance(Point A, Point B){
+  public static double distance(Point A, Point B){
     double changeX = A.x - B.x;
     double changeY = A.y - B.y;
     return Math.sqrt((changeX * changeX) + (changeY * changeY));

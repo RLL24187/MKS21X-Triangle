@@ -30,8 +30,8 @@ public class triangleDriver{
     System.out.println(A1.distanceTo(C1)); //Should get 5.0
     System.out.println(B2.distanceTo(C2)); //Should get 12.0
     //Testing Point class distance
-    //System.out.println(distance(A1, A2)); //Should get sqrt(2) or about 1.414
-    //System.out.println(distance(B1, B2)); //Should get sqrt(41) or about 6.403
+    System.out.println(Point.distance(A1, A2)); //Should get sqrt(5) or about 2.236
+    System.out.println(Point.distance(B1, B2)); //Should get sqrt(41) or about 6.403
     //Making triangles using Triangle Point constructor
     Triangle T1 = new Triangle(A1, B1, C1);
     Triangle T2 = new Triangle(A2, B2, C2);
@@ -43,5 +43,8 @@ public class triangleDriver{
     System.out.println(T2.getPerimeter()); //Should get 30.0
     System.out.println(TA.getPerimeter()); //Should get 90.0
     System.out.println(TB.getPerimeter()); //Should get about 53.781
+    //Testing getVertex()
+    //System.out.println(T1.getVertex(3)); //Should get (5, 5)
+    //System.out.println(TB.getVertex(2)); //Should get (8, 5)
   }
 }
