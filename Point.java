@@ -14,4 +14,16 @@ public class Point{
   public double getY(){
     return this.y;
   }
+  //Distance to a point given a point
+  public double distanceTo(Point p){
+    double changeX = this.x - p.x;
+    double changeY = this.y - p.y;
+    return Math.sqrt((changeX * changeX) + (changeY * changeY));
+  }
+  //Distance between two points given in params
+  public double distance(Point A, Point B){
+    double changeX = A.x - B.x;
+    double changeY = A.y - B.y;
+    return Math.sqrt((changeX * changeX) + (changeY * changeY));
+  }
 }
