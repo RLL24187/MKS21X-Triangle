@@ -21,33 +21,33 @@ public class Triangle{
   }
   //Getting vertex
   public Point getVertex(int index){
-    if (index < 1 || index > 3){
-      System.out.println("Please enter a number between 1 to 3 inclusive.");
-      return new Point(0.,0.);
+    if (index < 0 || index > 2){
+      System.out.println("Please enter a number between 0 to 2 inclusive.");
+      return null;
     }
-    if (index == 1){
+    if (index == 0){
       return new Point(this.v1.getX(), this.v1.getY());
     }
-    if (index == 2){
+    if (index == 1){
       return new Point(this.v2.getX(), this.v2.getY());
     }
     return new Point(this.v3.getX(), this.v3.getY());
   }
   public void setVertex(int idx, Point p){
-    if (idx < 1 || idx > 3){
-      System.out.println("Please enter a number between 1 to 3 inclusive.");
+    if (idx < 0 || idx > 2){
+      System.out.println("Please enter a number between 0 to 2 inclusive.");
     }
-    if (idx == 1){
+    if (idx == 0){
       this.v1 = new Point(p.getX(), p.getY());
-    }if (idx == 2){
+    }if (idx == 1){
       this.v2 = new Point(p.getX(), p.getY());
     }
-    if (idx == 3){
+    if (idx == 2){
       this.v3 = new Point(p.getX(), p.getY());
     }
   }
   //toString triangle
-  public String toStringTriangle(){
-    return "Triangle: A" + this.v1.toString() + ", B" + this.v2.toString() + ", C" + this.v3.toString(); 
+  public String toString(){
+    return "Triangle: A" + this.v1 + ", B" + this.v2 + ", C" + this.v3;
   }
 }
